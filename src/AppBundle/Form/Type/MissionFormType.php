@@ -23,6 +23,9 @@ class MissionFormType extends AbstractType{
             ->add('dateDebut')
             ->add('dateFin')
             ->add('pays')
+            ->add('enregistrer', SubmitType::class, array(
+                'attr' => array('class' => 'btn btn-primary')
+            ))
         ;
     }
     public function configureOptions(OptionsResolver $resolver)
@@ -31,3 +34,4 @@ class MissionFormType extends AbstractType{
             'data_class' => 'AppBundle\Entity\Mission'
         ]);
     }
+}
